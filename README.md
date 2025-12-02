@@ -4,37 +4,38 @@
 Documentation | API reference
 
 Cypress is a next generation front end testing tool built for the modern web. It addresses the key pain points developers and QA engineers face when testing modern applications. Cypress is fast, easy, and reliable testing for anything that runs in a browser.
-	Linux	macOS	Windows
 
-
-
+|          | Linux | macOS | Windows |
+|   :---   | :---: | :---: | :---:   |
+| Chromium <!-- GEN:chromium-version -->143.0.7499.4<!-- GEN:stop --> | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Firefox <!-- GEN:webkit-version -->26.0<!-- GEN:stop --> | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Edge <!-- GEN:firefox-version -->144.0.2<!-- GEN:stop --> | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 Headless execution is supported for all browsers. Check out system requirements for details.
+
+
 Installation
 
 Cypress can be installed via npm or yarn.
+
 Using npm
-
 The easiest way to get started with Cypress is to install it as a dev dependency.
-Shell
-
+```Shell
 # Install Cypress
 npm install cypress --save-dev
-
 # Open the Cypress App
 npx cypress open
+```
 
 This will create a cypress folder with example tests and configuration files.
 Headless Mode
 
 To run tests in the terminal without opening the GUI (useful for CI/CD or Codespaces).
-Shell
-
-npx cypress run
-
-    Getting started
-
-    Writing your first test
+```Shell
+	npx cypress run
+```
+* [Getting started](https://docs.cypress.io/app/get-started/install-cypress)
+* [API reference](https://docs.cypress.io/app/end-to-end-testing/writing-your-first-end-to-end-test)
 
 Capabilities
 Time Travel • Debuggability
@@ -54,11 +55,12 @@ Network Control. Verify and control the behavior of functions, server responses,
 Consistent Results. Cypress runs in the same run-loop as your application. This means you have native access to every single object.
 Examples
 
-To learn how to run these Cypress examples, check out our kitchen sink app.
-Page screenshot
+To learn how to run these Cypress examples, check out our [kitchen sink app](https://docs.cypress.io/app/get-started/install-cypress)
 
+Page screenshot
 This code snippet navigates to Cypress homepage and saves a screenshot.
-JavaScript
+
+```JavaScript
 
 describe('Screenshot Test', () => {
   it('Takes a screenshot of the homepage', () => {
@@ -66,11 +68,12 @@ describe('Screenshot Test', () => {
     cy.screenshot('example-screenshot');
   });
 });
+```
 
 Mobile Viewport
-
 This snippet sets the viewport to resemble an iPhone X, navigates to a site, and asserts visibility.
-JavaScript
+
+```JavaScript
 
 describe('Mobile Viewport', () => {
   it('Render correctly on mobile', () => {
@@ -84,11 +87,13 @@ describe('Mobile Viewport', () => {
     cy.url().should('include', '/');
   });
 });
+```
 
 Intercept network requests
 
 This code snippet sets up request routing (Interception) to mock a network response.
-JavaScript
+
+```JavaScript
 
 describe('Network Intercept', () => {
   it('Mocks a GET request', () => {
@@ -105,12 +110,12 @@ describe('Network Intercept', () => {
     cy.contains('John Doe').should('be.visible');
   });
 });
+```
 
 Custom Commands
-
 This snippet shows how to use a custom command (e.g., defined in commands.js) to simplify login.
-JavaScript
 
+```JavaScript
 describe('Login Test', () => {
   it('Logs in using custom command', () => {
     // Assuming cy.login() is defined in support/commands.js
@@ -120,13 +125,16 @@ describe('Login Test', () => {
     cy.get('.welcome-msg').should('contain', 'Welcome back');
   });
 });
+```
 
 Resources
 
-    Documentation
+* [Documentation](https://docs.cypress.io/app/get-started/why-cypress)
+  
+* [API reference](https://docs.cypress.io/api/table-of-contents)
+  
+* [Plugins](https://docs.cypress.io/app/plugins/plugins-list)
 
-    API reference
+* [Changelog](https://docs.cypress.io/app/references/changelog)
 
-    Plugins
 
-    Changelog
