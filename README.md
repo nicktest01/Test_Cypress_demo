@@ -3,7 +3,9 @@
 🌲 Cypress
 Documentation | API reference
 
-Cypress is a next generation front end testing tool built for the modern web. It addresses the key pain points developers and QA engineers face when testing modern applications. Cypress is fast, easy, and reliable testing for anything that runs in a browser.
+Nick:
+Cypress is a next generation front end testing tool built for the modern web. It addresses the key pain points developers and QA engineers face when testing modern applications. 
+Cypress is fast, easy, and reliable testing for anything that runs in a browser.
 
 |          | Linux | macOS | Windows |
 |   :---   | :---: | :---: | :---:   |
